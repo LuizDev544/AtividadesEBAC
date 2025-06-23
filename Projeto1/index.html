@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confeitaria Delicia!</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sevillana&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Confeitaria Delicia!</h1>
+        <nav>
+            <a href="#cadastro">Cadastro</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre-nos">Sobre Nós</a>
+        </nav>
+    </header>
+    <main>
+        <section id="cardapio" class="cardapio">
+            <div class="logo-container">
+                <img src="./Logo_confeitaria.jpg" alt="Logo da Confeitaria">
+            </div>
+            <h2>Cardápio</h2>
+            <table>
+                <caption>Cardápio Doces Delicia!</caption>
+                <thead>
+                    <tr>
+                        <th>Imagem</th>
+                        <th>Sobre</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="./cupcake.png" alt="Cupcake"></td>
+                        <td>Um delicioso cupcake de sabor morango com raspas de massa e cobertura de chocolate branco!</td>
+                        <td>R$ 10,50</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./brownie.webp" alt="Brownie"></td>
+                        <td>Um brownie caseiro recheado com gotas de chocolate, simplesmente delicioso!</td>
+                        <td>R$ 7,87</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./pao-de-mel.png" alt="Pão de Mel"></td>
+                        <td>Massa fofa com recheio irresistível, feito com muito amor!</td>
+                        <td>R$ 11,50</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./pirulito.png" alt="Pirulito"></td>
+                        <td>Pirulito grande com diversos sabores, proporcionando uma experiência única.</td>
+                        <td>R$ 8,90</td>
+                    </tr>
+                    <tr>
+                        <td><img src="./pudim.png" alt="Pudim"></td>
+                        <td>Pudim clássico com calda suave e sabor delicioso.</td>
+                        <td>R$ 9,40</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="cadastro" class="cadastro">
+            <h2>Cadastro</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input id="nome" type="text" placeholder="Digite seu nome">
+                <br>
+                <label for="email">Email:</label>
+                <input id="email" type="email" placeholder="Digite seu email">
+                <br>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" placeholder="Escreva sua mensagem"></textarea>
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <section id="sobre-nos" class="sobre-nos">
+            <h2>Sobre Nós</h2>
+            <figure>
+                <img src="./gps.jpg" alt="Localização da Confeitaria">
+                <figcaption>
+                    <address>Bairro: Html, Rua: JavaScript, Número: 999 - SP</address>
+                    Desde: <time>24/08/1988</time>
+                </figcaption>
+            </figure>
+        </section>
+        <footer>
+            <div class="rodapé">
+                <p>
+                    &copy; Doces Delicia! - Todos os direitos reservados - 1988
+                </p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

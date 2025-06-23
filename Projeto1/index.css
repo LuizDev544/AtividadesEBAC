@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+.cabecalho {
+    background-color: #ffebcd;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-family: "Sevillana", cursive;
+    font-size: 2.5rem;
+    color: #d2691e;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #d2691e;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    max-width: 350px; 
+    border-radius: 10px;
+}
+
+.cardapio {
+    max-width: 600px;
+    font-family: "Sevillana", cursive;
+    margin: 0 auto;
+}
+
+.cardapio h2 {
+    color: #d2691e;
+    font-size: 2rem;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table caption {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #d2691e;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    color: #333;
+}
+
+table td img {
+    max-width: 70px;
+}
+
+.cadastro, .sobre-nos {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto; 
+    text-align: left; 
+}
+
+.cadastro h2{
+    color: #d2691e;
+}
+.cadastro form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.cadastro input, .cadastro textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+}
+
+.cadastro textarea{
+    resize:none;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center; 
+}
+
+.sobre-nos h2{
+    color: #d2691e;
+}
+
+button:hover {
+    background-color: #c16018;
+}
+
+footer {
+    background-color: #ffebcd;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+    margin-top: 40px;
+}
