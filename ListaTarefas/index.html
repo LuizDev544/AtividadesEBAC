@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>Lista de Tarefas</h1>
+        <form id="taskForm">
+            <label for="taskInput">Insira uma tarefa:</label>
+            <br>
+            <input type="text" id="taskInput" required placeholder="(campo não preenchido)">
+            <br>
+            <button type="submit">Adicionar tarefa</button>
+            <button type="reset" id="resetButton">Excluir tarefas</button>
+            <br>
+        </form>
+        <ul id="taskList">
+            <li id="defaultItem" >(sem tarefas a cumprir)</li>
+        </ul>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
