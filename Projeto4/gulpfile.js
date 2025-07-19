@@ -10,7 +10,7 @@ const uglify = require('gulp-uglify');
 function scripts() {
     return gulp.src('./src/scripts/*.js')
         .pipe(uglify())
-        .pipe(gulp.dest('./public/js'));
+        .pipe(gulp.dest('./dist/js'));
 }
 
 function styles() {
@@ -18,7 +18,7 @@ function styles() {
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
-        .pipe(gulp.dest('./public/css'));
+        .pipe(gulp.dest('./dist/css'));
 }
 
 function images() {
@@ -38,7 +38,7 @@ function images() {
             }),
             svgo()
         ]))
-        .pipe(gulp.dest('./public/images'));
+        .pipe(gulp.dest('./dist/images'));
 }
 
 exports.default = gulp.parallel(styles, images, scripts);
