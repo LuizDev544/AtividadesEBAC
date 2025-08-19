@@ -1,7 +1,7 @@
-import Teste from './Teste'
+import Teste from './teste'
 
 function App() {
-  return <Teste/>
+  return <Teste />
 }
 
 export default App

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-function teste() {
+function Teste() {
   return <div>Olá</div>
 }
 
-export default teste
+export default Teste
