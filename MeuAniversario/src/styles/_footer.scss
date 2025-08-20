@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+.footer {
+    padding: 24px 32px;
+    background-color: $green;
+    display: flex;
+    justify-content: space-between;
+
+    &__items {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 1rem;
+
+        &__img {
+            width: 32px;
+            height: auto;
+        }
+    }
+}
