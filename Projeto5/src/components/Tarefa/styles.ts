@@ -11,12 +11,12 @@ type TagProps = {
 
 function retornarCorDeFundo(props: TagProps): string {
   if (props.parametro === 'prioridade') {
-    if (props.prioridade === enums.Prioridade.URGENTE) return variavies.vermelho
-    if (props.prioridade === enums.Prioridade.IMPORTANTE)
-      return variavies.amarelo2
+    if (props.prioridade === enums.Prioridade.DESCONHECIDO)
+      return variavies.vermelho
+    if (props.prioridade === enums.Prioridade.FAMILIA) return variavies.amarelo2
   } else {
-    if (props.status === enums.Status.PENDENTE) return variavies.amarelo
-    if (props.status === enums.Status.CONCLUIDA) return variavies.verde
+    if (props.status === enums.Status.INCOMPLETO) return variavies.amarelo
+    if (props.status === enums.Status.COMPLETO) return variavies.verde
   }
   return '#ccc'
 }

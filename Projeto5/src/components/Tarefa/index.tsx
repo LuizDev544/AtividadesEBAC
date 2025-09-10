@@ -44,7 +44,7 @@ const Tarefa = ({
         <input
           type="checkbox"
           id={titulo}
-          checked={status === enums.Status.CONCLUIDA}
+          checked={status === enums.Status.COMPLETO}
           onChange={alteraStatusTarefa}
         />
         <S.Titulo>
