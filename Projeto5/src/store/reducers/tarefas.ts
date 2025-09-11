@@ -51,8 +51,8 @@ const tarefaSlice = createSlice({
       )
       if (indexDaTarefa >= 0) {
         state.itens[indexDaTarefa].status = action.payload.finalizado
-          ? enums.Status.CONCLUIDA
-          : enums.Status.PENDENTE
+          ? enums.Status.COMPLETO
+          : enums.Status.INCOMPLETO
       }
     }
   }

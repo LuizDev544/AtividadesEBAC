@@ -11,17 +11,17 @@ const Formulario = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const [titulo, setTitulo] = useState('')
-  const [descricao, setDescricao] = useState('')
-  const [prioridade, setPrioridade] = useState(enums.Prioridade.NORMAL)
+  const [email, setEmail] = useState('')
+  const [telefone, setTelefone] = useState(enums.Prioridade.DESCONHECIDO)
 
   const cadastrarTarefa = (evento: FormEvent) => {
     evento.preventDefault()
     dispatch(
       cadastrar({
         titulo,
-        prioridade,
-        descricao,
-        status: enums.Status.PENDENTE
+        email,
+        telefone,
+        status: enums.Status.INCOMPLETO
       })
     )
     navigate('/')
@@ -29,22 +29,28 @@ const Formulario = () => {
 
   return (
     <MainContainer>
-      <Titulo>Nova Tarefa</Titulo>
+      <Titulo>Criando Novo Contato</Titulo>
       <Form onSubmit={cadastrarTarefa}>
         <Campo
           value={titulo}
           onChange={(evento) => setTitulo(evento.target.value)}
           type="text"
-          placeholder="Titulo"
+          placeholder="Nome Completo"
         />
         <Campo
-          value={descricao}
-          onChange={({ target }) => setDescricao(target.value)}
-          as="textarea"
-          placeholder="Descrição da tarefa"
+          value={email}
+          onChange={({ target }) => setEmail(target.value)}
+          type="email"
+          placeholder="Email de Contato"
+        />
+        <Campo
+          value={telefone}
+          onChange={({ target }) => setTelefone(target.value)}
+          type="number"
+          placeholder="Telefone de Contato"
         />
         <Opcoes>
-          <p>Prioridade</p>
+          <p>Tipo do seu Contato</p>
           {Object.values(enums.Prioridade).map((prioridade) => (
             <Opcao key={prioridade}>
               <input
@@ -55,7 +61,7 @@ const Formulario = () => {
                   setPrioridade(evento.target.value as enums.Prioridade)
                 }
                 id="prioridade"
-                defaultChecked={prioridade === enums.Prioridade.NORMAL}
+                defaultChecked={prioridade === enums.Prioridade.DESCONHECIDO}
               />{' '}
               <label htmlFor={prioridade}>{prioridade}</label>
             </Opcao>

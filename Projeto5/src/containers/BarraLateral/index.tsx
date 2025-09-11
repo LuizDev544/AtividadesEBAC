@@ -52,7 +52,7 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
                 criterio="prioridade"
                 legenda="Familia"
               />
-              <FiltroCard criterio="todas" legenda="todas" />
+              <FiltroCard criterio="todas" legenda="Contatos" />
             </S.Filtros>
           </>
         ) : (
