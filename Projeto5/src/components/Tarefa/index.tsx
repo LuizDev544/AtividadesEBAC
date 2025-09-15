@@ -18,15 +18,16 @@ const Tarefa = ({
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
   const [descricao, setDescricao] = useState('')
+
   useEffect(() => {
-    if (descricaoOriginal.length > 0) {
+    if (descricaoOriginal && descricaoOriginal.length > 0) {
       setDescricao(descricaoOriginal)
     }
   }, [descricaoOriginal])
 
   function cancelarDescricao() {
     setEstaEditando(false)
-    setDescricao(descricaoOriginal)
+    setDescricao(descricaoOriginal ?? '')
   }
 
   function alteraStatusTarefa(evento: ChangeEvent<HTMLInputElement>) {

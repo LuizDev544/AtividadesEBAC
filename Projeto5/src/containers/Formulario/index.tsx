@@ -12,7 +12,10 @@ const Formulario = () => {
   const navigate = useNavigate()
   const [titulo, setTitulo] = useState('')
   const [email, setEmail] = useState('')
-  const [telefone, setTelefone] = useState(enums.Prioridade.DESCONHECIDO)
+  const [telefone, setTelefone] = useState('')
+  const [prioridade, setPrioridade] = useState<enums.Prioridade>(
+    enums.Prioridade.DESCONHECIDO
+  )
 
   const cadastrarTarefa = (evento: FormEvent) => {
     evento.preventDefault()
@@ -21,6 +24,7 @@ const Formulario = () => {
         titulo,
         email,
         telefone,
+        prioridade,
         status: enums.Status.INCOMPLETO
       })
     )
@@ -51,23 +55,23 @@ const Formulario = () => {
         />
         <Opcoes>
           <p>Tipo do seu Contato</p>
-          {Object.values(enums.Prioridade).map((prioridade) => (
-            <Opcao key={prioridade}>
+          {Object.values(enums.Prioridade).map((valor) => (
+            <Opcao key={valor}>
               <input
-                value={prioridade}
+                value={valor}
                 name="prioridade"
                 type="radio"
                 onChange={(evento) =>
                   setPrioridade(evento.target.value as enums.Prioridade)
                 }
-                id="prioridade"
+                id={valor}
                 defaultChecked={prioridade === enums.Prioridade.DESCONHECIDO}
-              />{' '}
-              <label htmlFor={prioridade}>{prioridade}</label>
+              />
+              <label htmlFor={valor}>{valor}</label>
             </Opcao>
           ))}
         </Opcoes>
-        <BotaoSalvar type="submit">Cadastrar</BotaoSalvar>
+        <BotaoSalvar type="submit">Cadastrar Contato</BotaoSalvar>
       </Form>
     </MainContainer>
   )

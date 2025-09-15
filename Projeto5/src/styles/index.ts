@@ -43,13 +43,13 @@ export const Botao = styled.button`
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  background-color: ${variavies.azulEscuro};
+  background-color: ${variavies.marrom};
   border-radius: 8px;
   margin-right: 8px;
 `
 
 export const BotaoSalvar = styled(Botao)`
-  background-color: ${variavies.verde};
+  background-color: ${variavies.verdeMeioFraco};
 `
 
 export default EstiloGlobal

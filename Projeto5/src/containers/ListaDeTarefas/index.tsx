@@ -34,9 +34,9 @@ const ListaDeTarefas = () => {
     const complementacao =
       termo !== undefined && termo.length > 0 ? `e "${termo}"` : ''
     if (criterio === 'todas') {
-      mensagem = `${quantidade} tarefa(s) encontrada(s) como: todas ${complementacao}`
+      mensagem = `${quantidade} Contato(s) encontrada(s) como: todas ${complementacao}`
     } else {
-      mensagem = `${quantidade} tarefa(s) encontrada(s) como: "${`{criterio} = ${valor}`}" ${complementacao}`
+      mensagem = `${quantidade} Contatos(s) encontrada(s) como: "${`{criterio} = ${valor}`}" ${complementacao}`
     }
 
     return mensagem
