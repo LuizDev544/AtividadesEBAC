@@ -56,6 +56,8 @@ const ListaDeTarefas = () => {
                   descricao={t.descricao}
                   titulo={t.titulo}
                   status={t.status}
+                  telefone={t.telefone}
+                  email={t.email}
                   prioridade={t.prioridade}
                 />
               </li>

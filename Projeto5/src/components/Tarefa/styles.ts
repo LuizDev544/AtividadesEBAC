@@ -39,6 +39,23 @@ export const Titulo = styled.h3`
   font-size: 18px;
   font-weight: bold;
   margin-left: 8px;
+  display: flex;
+  gap: 10px;
+
+  span.nome {
+    font-weight: bold;
+    color: #222;
+  }
+
+  span.telefone {
+    font-weight: bold;
+    color: #222;
+  }
+
+  span.email {
+    font-weight: bold;
+    color: #222;
+  }
 `
 
 export const Tag = styled.span<TagProps>`

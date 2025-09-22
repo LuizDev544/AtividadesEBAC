@@ -13,6 +13,8 @@ const Tarefa = ({
   prioridade,
   status,
   titulo,
+  telefone,
+  email,
   id
 }: Props) => {
   const dispatch = useDispatch()
@@ -50,8 +52,9 @@ const Tarefa = ({
         />
         <S.Titulo>
           {estaEditando && <em>Editando:</em>}
-          {titulo}
-          {}
+          <span className="nome">{titulo}</span>
+          <span className="telefone">{telefone}</span>
+          <span className="email">{email}</span>
         </S.Titulo>
       </label>
       <S.Tag parametro="prioridade" prioridade={prioridade}>
@@ -76,6 +79,8 @@ const Tarefa = ({
                     prioridade,
                     status,
                     titulo,
+                    telefone,
+                    email,
                     id
                   })
                 )
