@@ -6,6 +6,7 @@ import { RootReducer } from '../../store'
 import { alteraTermo } from '../../store/reducers/filtro'
 import * as enums from '../../utils/enums/Tarefa'
 import { Botao, Campo } from '../../styles'
+import incompletoImg from '../../assets/incompleto.png'
 
 type Props = {
   mostrarFiltros: boolean
@@ -27,6 +28,7 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
               onChange={(evento) => dispatch(alteraTermo(evento.target.value))}
             />
             <S.Filtros>
+              <img src={incompletoImg} alt="Incompleto" width={40} />
               <FiltroCard
                 valor={enums.Status.INCOMPLETO}
                 criterio="status"

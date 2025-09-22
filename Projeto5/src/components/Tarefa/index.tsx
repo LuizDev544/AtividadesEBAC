@@ -51,6 +51,7 @@ const Tarefa = ({
         <S.Titulo>
           {estaEditando && <em>Editando:</em>}
           {titulo}
+          {}
         </S.Titulo>
       </label>
       <S.Tag parametro="prioridade" prioridade={prioridade}>
