@@ -6,7 +6,12 @@ import { RootReducer } from '../../store'
 import { alteraTermo } from '../../store/reducers/filtro'
 import * as enums from '../../utils/enums/Tarefa'
 import { Botao, Campo } from '../../styles'
-import incompletoImg from '../../assets/incompleto.png'
+import incompletoImg from '../../images/incompleto.png'
+import completoImg from '../../images/completo.png'
+import amigoImg from '../../images/Amigo.png'
+import desconhecidoImg from '../../images/desconhecido.png'
+import FamiliaImg from '../../images/familia.png'
+import todosImg from '../../images/todos.png'
 
 type Props = {
   mostrarFiltros: boolean
@@ -28,32 +33,49 @@ const BarraLateral = ({ mostrarFiltros }: Props) => {
               onChange={(evento) => dispatch(alteraTermo(evento.target.value))}
             />
             <S.Filtros>
-              <img src={incompletoImg} alt="Incompleto" width={40} />
+              <S.ImagemCentralizada>
+                <img src={incompletoImg} alt="Incompleto" width={40} />
+              </S.ImagemCentralizada>
               <FiltroCard
                 valor={enums.Status.INCOMPLETO}
                 criterio="status"
                 legenda="Incompleto"
               />
+              <S.ImagemCentralizada>
+                <img src={completoImg} alt="Incompleto" width={40} />
+              </S.ImagemCentralizada>
               <FiltroCard
                 valor={enums.Status.COMPLETO}
                 criterio="status"
                 legenda="Completo"
               />
+              <S.ImagemCentralizada>
+                <img src={amigoImg} alt="Incompleto" width={40} />
+              </S.ImagemCentralizada>
               <FiltroCard
                 valor={enums.Prioridade.AMIGO}
                 criterio="prioridade"
                 legenda="Amigo"
               />
+              <S.ImagemCentralizada>
+                <img src={desconhecidoImg} alt="Incompleto" width={40} />
+              </S.ImagemCentralizada>
               <FiltroCard
                 valor={enums.Prioridade.DESCONHECIDO}
                 criterio="prioridade"
                 legenda="Desconhecido"
               />
+              <S.ImagemCentralizada>
+                <img src={FamiliaImg} alt="Incompleto" width={40} />
+              </S.ImagemCentralizada>
               <FiltroCard
                 valor={enums.Prioridade.FAMILIA}
                 criterio="prioridade"
                 legenda="Familia"
               />
+              <S.ImagemCentralizada>
+                <img src={todosImg} alt="Incompleto" width={50} />
+              </S.ImagemCentralizada>
               <FiltroCard criterio="todas" legenda="Contatos" />
             </S.Filtros>
           </>
