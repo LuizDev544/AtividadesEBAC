@@ -1,95 +1,44 @@
-import Banner from '../../components/Banner'
-import { ProductList } from '../../components/ProductList'
-import Game from '../../models/Game'
-import resident from '../../assets/images/images/resident.png'
-import starwars from '../../assets/images/images/star_wars.png'
-import zelda from '../../assets/images/images/zelda.png'
-import diablo from '../../assets/images/images/diablo.png'
+import { useEffect, useState } from 'react'
+import Footer from '../../components/Footer'
+import Header from '../../components/Header'
+import RestaurantList from '../../components/List'
+export type CardapioItem = {
+  id: number
+  nome: string
+  descricao: string
+  preco: number
+  porcao: string
+  foto: string
+  quantidade: number
+}
+export type Restaurants = {
+  foto: string
+  infos: string[]
+  id: number
+  titulo: string
+  destacado: boolean
+  tipo: string
+  avaliacao: string
+  descricao: string
+  capa: string
+  cardapio: CardapioItem[]
+}
 
-const promocoes: Game[] = [
-  {
-    id: 1,
-    category: 'Ação',
-    description: 'Jogo de ação emocionante',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: resident
-  },
-  {
-    id: 2,
-    category: 'Ação',
-    description: 'Jogo de ação emocionante',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: diablo
-  },
-  {
-    id: 3,
-    category: 'Ação',
-    description: 'Jogo de ação emocionante',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: zelda
-  },
-  {
-    id: 4,
-    category: 'Ação',
-    description: 'Jogo de ação emocionante',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: starwars
-  }
-]
+const Home = () => {
+  const [restaurants, setRestaurants] = useState<Restaurants[]>([])
 
-const emBreve: Game[] = [
-  {
-    id: 5,
-    category: 'Rpg',
-    description: 'Jogo de ação emocionante',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: resident
-  },
-  {
-    id: 6,
-    category: 'Rpg',
-    description: 'Jogo de ação emocionante',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: resident
-  },
-  {
-    id: 7,
-    category: 'Rpg',
-    description: 'Jogo de ação emocionante',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: resident
-  },
-  {
-    id: 8,
-    category: 'Rpg',
-    description: 'Jogo de ação emocionante',
-    title: 'Resident Evil 4',
-    system: 'Windows',
-    infos: ['10%', 'R$ 250,00'],
-    image: resident
-  }
-]
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((resposta) => resposta.json())
+      .then((resposta) => setRestaurants(resposta))
+  }, [])
 
-const Home = () => (
-  <>
-    <Banner />
-    <ProductList games={promocoes} title="Promoções" backgroundColor="gray" />
-    <ProductList games={emBreve} title="Em breve" backgroundColor="black" />
-  </>
-)
-
+  return (
+    <>
+      <Header />
+      <RestaurantList restaurants={restaurants} />
+      <Footer />
+    </>
+  )
+}
 export default Home

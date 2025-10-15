@@ -1,26 +1,34 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
-export const Container = styled.footer`
-  background-color: ${cores.cinza};
-  padding: 32px 0;
-  font-size: 14px;
+export const ContainerFooter = styled.section`
+  background-color: ${cores.bege};
 `
 
-export const SectionTitle = styled.h4`
-  color: ${cores.branca};
-  font-size: 16px;
-  font-weight: bold;
+export const Logo = styled.img`
+  display: block;
+  margin: 0 auto;
+  padding-top: 40px;
 `
-export const Links = styled.ul`
+
+export const ListLogos = styled.ul`
   display: flex;
-  margin-top: 16px;
+  list-style: none;
+  justify-content: center;
+  padding-top: 32px;
+
+  #twitter {
+    margin: 0 8px;
+  }
 `
-export const Link = styled.a`
-  color: ${cores.cinzaClaro};
-  text-decoration: none;
-  margin-right: 8px;
-`
-export const FooterSection = styled.div`
-  margin-bottom: 64px;
+
+export const TextFooter = styled.p`
+  color: ${cores.rosa};
+  font-size: 10px;
+  width: 480px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 40px;
 `

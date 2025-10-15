@@ -1,39 +1,27 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
 
-export const HeaderBar = styled.header`
-  background-color: ${cores.cinza};
-  padding: 24px;
-  border-radius: 16px;
-  margin-bottom: 80px;
+export const Imagem = styled.div`
+  width: 100%;
+  height: 384px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-
-  a {
-    color: ${cores.branca};
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  div {
-    display: flex;
-    align-items: center;
-  }
+  margin-bottom: 80px;
 `
 
-export const Links = styled.ul`
-  display: flex;
-  margin-left: 40px;
-`
-export const LinkItem = styled.li`
-  margin-right: 16px;
+export const Logo = styled.img`
+  max-width: 100%;
+  height: auto;
 `
 
-export const LinkCart = styled.a`
-  display: flex;
-
-  img {
-    margin-left: 16px;
-  }
+export const TextHeader = styled.p`
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 100%;
+  color: ${cores.rosa};
+  margin-top: 138px;
+  max-width: 550px;
+  text-align: center;
 `

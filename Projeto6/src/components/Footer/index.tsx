@@ -1,53 +1,35 @@
-import { Container, FooterSection, SectionTitle, Link, Links } from './styles'
-
-const currentYear = new Date().getFullYear()
+import { ContainerFooter, Logo, ListLogos, TextFooter } from './styles'
+import logo from '../../assets/images/logo.svg'
+import instagramLogo from '../../assets/images/instagram.png'
+import twitterLogo from '../../assets/images/twitter.png'
+import facebookLogo from '../../assets/images/fb.png'
 
 const Footer = () => (
-  <Container>
-    <div className="container">
-      <FooterSection>
-        <SectionTitle>Categorias</SectionTitle>
-        <Links>
-          <li>
-            <Link>RPG</Link>
-          </li>
-          <li>
-            <Link>Ação</Link>
-          </li>
-          <li>
-            <Link>Aventura</Link>
-          </li>
-          <li>
-            <Link>Esportes</Link>
-          </li>
-          <li>
-            <Link>Simulação</Link>
-          </li>
-          <li>
-            <Link>Estratégia</Link>
-          </li>
-          <li>
-            <Link>FPS</Link>
-          </li>
-        </Links>
-      </FooterSection>
-      <FooterSection>
-        <SectionTitle>Acesso rápido</SectionTitle>
-        <Links>
-          <li>
-            <Link>Novidades</Link>
-          </li>
-          <li>
-            <Link>Promoções</Link>
-          </li>
-          <li>
-            <Link>Em breve</Link>
-          </li>
-        </Links>
-      </FooterSection>
-      <p>{currentYear} - &copy; E-eplay Todos os direitos reservados.</p>
-    </div>
-  </Container>
+  <ContainerFooter>
+    <Logo src={logo} alt="Efood" />
+    <ListLogos>
+      <li>
+        <a href="#">
+          <img src={instagramLogo} alt="Instagram" />
+        </a>
+      </li>
+      <li id="twitter">
+        <a href="#">
+          <img src={twitterLogo} alt="twitter" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src={facebookLogo} alt="facebook" />
+        </a>
+      </li>
+    </ListLogos>
+    <TextFooter>
+      A efood é uma plataforma para divulgação de estabelecimentos, a
+      responsabilidade pela entrega, qualidade dos produtos é toda do
+      estabelecimento contratado.
+    </TextFooter>
+  </ContainerFooter>
 )
 
 export default Footer
