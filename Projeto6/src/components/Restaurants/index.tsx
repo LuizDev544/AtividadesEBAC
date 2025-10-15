@@ -1,5 +1,5 @@
 import { ContainerRest, Description, Infos, StyledButton } from './styles'
-import estrelaImg from '../../assets/images/estrela.png'
+import estrelaImg from '../../assets/images/images/estrela.png'
 import Tag from '../Tag'
 import { Link } from 'react-router-dom'
 

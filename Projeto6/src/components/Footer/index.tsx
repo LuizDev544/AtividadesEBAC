@@ -1,8 +1,8 @@
 import { ContainerFooter, Logo, ListLogos, TextFooter } from './styles'
-import logo from '../../assets/images/logo.svg'
-import instagramLogo from '../../assets/images/instagram.png'
-import twitterLogo from '../../assets/images/twitter.png'
-import facebookLogo from '../../assets/images/fb.png'
+import logo from '../../assets/images/images/logo.svg'
+import instagramLogo from '../../assets/images/images/instagram.png'
+import twitterLogo from '../../assets/images/images/twitter.png'
+import facebookLogo from '../../assets/images/images/fb.png'
 
 const Footer = () => (
   <ContainerFooter>
