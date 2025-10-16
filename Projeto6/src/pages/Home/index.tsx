@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
-import RestaurantList from '../../components/List'
 export type CardapioItem = {
   id: number
   nome: string

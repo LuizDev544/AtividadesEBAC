@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
-import FoodList from '../../components/FoodList'
+import { FoodList } from '../../components/FoodList'
 import Footer from '../../components/Footer'
-import HeaderPerfil from '../../components/HeaderPerfil'
 import { useParams } from 'react-router-dom'
 import type { CardapioItem, Restaurants } from '../../pages/Home'
 
