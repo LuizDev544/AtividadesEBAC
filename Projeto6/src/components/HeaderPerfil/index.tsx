@@ -8,7 +8,6 @@ import {
   Banner,
   TextBanner,
   RestaurantName,
-  Cart
 } from './styles'
 
 import { Container } from '../../styles'
@@ -24,10 +23,8 @@ type Props = {
 export default function HeaderPerfil({ tipo, titulo, capa }: Props) {
   const { id } = useParams()
   const dispatch = useDispatch()
-  const abreCart = () => dispatch(open())
   const { items } = useSelector((state: RootReducer) => state.cart)
 
-  const { data: restaurante } = useGetRestauranteQuery(id!)
   return (
     <>
       <Imagem style={{ backgroundImage: `url(${fundoImg})` }}>
@@ -35,7 +32,6 @@ export default function HeaderPerfil({ tipo, titulo, capa }: Props) {
         <Link to="/">
           <img src={logo} alt="Efood" />
         </Link>
-        <Cart onClick={abreCart}>{items.length} produto(s) no carrinho</Cart>
       </Imagem>
       <Banner
         style={{
