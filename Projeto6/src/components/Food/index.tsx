@@ -32,6 +32,7 @@ export default function Food({
       <div onClick={onClick}>
         <TitleFood>{nome}</TitleFood>
         <DescriptionFood>{limitarDescricao(descricao)}</DescriptionFood>
+        <div>Preço: R$ {preco.toFixed(2)}</div>
         <StyledButton>Adicionar ao carrinho </StyledButton>
       </div>
     </ContainerFood>

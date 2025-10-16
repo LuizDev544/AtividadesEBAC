@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { useGetRestauranteQuery } from '../../services/api'
 import type { CardapioItem } from '../../pages/Home'
 import Food from '../Food'
 import { List } from './styles'
