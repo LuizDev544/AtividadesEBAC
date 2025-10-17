@@ -1,43 +1,56 @@
-import { useEffect, useState } from 'react'
-import Footer from '../../components/Footer'
-import Header from '../../components/Header'
-export type CardapioItem = {
-  id: number
-  nome: string
-  descricao: string
-  preco: number
-  porcao: string
-  foto: string
-  quantidade: number
-}
-export type Restaurants = {
-  foto: string
-  infos: string[]
-  id: number
-  titulo: string
-  destacado: boolean
-  tipo: string
-  avaliacao: string
-  descricao: string
-  capa: string
-  cardapio: CardapioItem[]
-}
+import Banner from '../../components/Banner'
+import Restaurant from '../../models/Restaurants'
+import PizzaMarGuerita from '../../assets/images/images/pizza.png'
+
+const Pizzas: Restaurant[] = [
+  {
+    id: 1,
+    descricao:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    imagem: PizzaMarGuerita,
+    titulo: 'Pizza Marguerita'
+  },
+  {
+    id: 2,
+    descricao:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    imagem: PizzaMarGuerita,
+    titulo: 'Pizza Marguerita'
+  },
+  {
+    id: 3,
+    descricao:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    imagem: PizzaMarGuerita,
+    titulo: 'Pizza Marguerita'
+  },
+  {
+    id: 4,
+    descricao:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    imagem: PizzaMarGuerita,
+    titulo: 'Pizza Marguerita'
+  },
+  {
+    id: 5,
+    descricao:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    imagem: PizzaMarGuerita,
+    titulo: 'Pizza Marguerita'
+  },
+  {
+    id: 6,
+    descricao:
+      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
+    imagem: PizzaMarGuerita,
+    titulo: 'Pizza Marguerita'
+  }
+]
 
 const Home = () => {
-  const [restaurants, setRestaurants] = useState<Restaurants[]>([])
-
-  useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
-      .then((resposta) => resposta.json())
-      .then((resposta) => setRestaurants(resposta))
-  }, [])
-
-  return (
-    <>
-      <Header />
-      <RestaurantList restaurants={restaurants} />
-      <Footer />
-    </>
-  )
+  <>
+    <Banner />
+    <RestaurantList games={promocoes} backgroundColor="gray" />
+    <RestaurantList games={emBreve} backgroundColor="black" />
+  </>
 }
-export default Home

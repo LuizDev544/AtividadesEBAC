@@ -1,5 +1,5 @@
 import bannerImg from '../../assets/images/images/fundoperfil.png'
-import { Imagem , Título , Texto } from './styles'
+import { Imagem, Título, Texto } from './styles'
 
 const Banner = () => (
   <Imagem style={{ backgroundImage: `url(${bannerImg})` }}>

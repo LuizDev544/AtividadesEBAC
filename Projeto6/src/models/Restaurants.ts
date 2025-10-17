@@ -1,25 +1,14 @@
 class Restaurants {
-  classification: string
-  description: string
-  image: string
-  infos: string[]
-  title: string
   id: number
+  imagem: string
+  titulo: string
+  descricao: string
 
-  constructor(
-    id: number,
-    classification: string,
-    description: string,
-    image: string,
-    infos: string[],
-    title: string
-  ) {
+  constructor(id: number, descricao: string, imagem: string, titulo: string) {
     this.id = id
-    this.classification = classification
-    this.description = description
-    this.image = image
-    this.infos = infos
-    this.title = title
+    this.descricao = descricao
+    this.imagem = imagem
+    this.titulo = titulo
   }
 }
 
