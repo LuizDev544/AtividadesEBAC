@@ -13,7 +13,7 @@ export const ContainerFood = styled.div`
   }
 `
 
-export const ImagemFood = styled.img`
+export const Imagem = styled.img`
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -22,19 +22,19 @@ export const ImagemFood = styled.img`
   padding: 8px;
 `
 
-export const TitleFood = styled.h4`
+export const Titulo = styled.h4`
   font-size: 16px;
   font-weight: 900;
   padding-bottom: 8px;
 `
 
-export const DescriptionFood = styled.p`
+export const Descricao = styled.p`
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   padding-bottom: 8px;
 `
-export const StyledButton = styled.button`
+export const BotaoFood = styled.button`
   width: 304px;
   height: 24px;
   background-color: ${cores.branco};
