@@ -1,27 +1,23 @@
-import Game from '../../models/Restaurants'
+import Restaurants from '../../models/Restaurants'
 import Product from '../Food'
 import { Container, List } from './styles'
 
 export type Props = {
   title: string
-  backgroundColor: 'gray' | 'black'
-  games: Game[]
+  food: Restaurants[]
 }
 
-export const ProductList = ({ title, backgroundColor, games }: Props) => (
-  <Container backgroundColor={backgroundColor}>
+export const ProductList = ({ title, food }: Props) => (
+  <Container>
     <div className="container">
       <h2>{title}</h2>
       <List>
-        {games.map((game) => (
+        {food.map((item) => (
           <Product
-            key={game.id}
-            category={game.category}
-            description={game.description}
-            image={game.image}
-            infos={game.infos}
-            system={game.system}
-            title={game.title}
+            key={item.id}
+            image={item.imagem}
+            title={item.titulo}
+            description={item.descricao}
           />
         ))}
       </List>

@@ -1,4 +1,5 @@
 import Banner from '../../components/Banner'
+import { FoodList } from '../../components/FoodList'
 import Restaurant from '../../models/Restaurants'
 import PizzaMarGuerita from '../../assets/images/images/pizza.png'
 
@@ -47,10 +48,12 @@ const Pizzas: Restaurant[] = [
   }
 ]
 
-const Home = () => {
+const Home = () => (
   <>
     <Banner />
-    <RestaurantList games={promocoes} backgroundColor="gray" />
-    <RestaurantList games={emBreve} backgroundColor="black" />
+    <FoodList games={Pizzas} backgroundColor="gray" />
+    <FoodList games={Pizzas} backgroundColor="black" />
   </>
-}
+)
+
+export default Home
