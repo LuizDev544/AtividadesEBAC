@@ -1,7 +1,36 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-function Teste() {
-  return <div>olá</div>
+type BotaoProps = {
+  principal: boolean
+  fontsize?: string
 }
 
-export default Teste;
+const Botao = styled.button<BotaoProps>`
+  background-color: ${(props) => (props.principal ? 'blue' : 'gray')};
+  font-size: ${(props) => props.fontsize || '16px'};
+`
+
+const BotaoPerigo = styled(Botao)`
+  background-color: red;
+  color: #fff;
+
+  span {
+    text-decoration: line-through;
+  }
+`
+
+function Teste() {
+  return (
+    <>
+      <Botao principal> Enviar </Botao>
+      <Botao fontsize="14px" principal={false}>
+        Cancelar
+      </Botao>
+      <BotaoPerigo as="a" principal>
+        <span>Agora</span>
+      </BotaoPerigo>
+    </>
+  )
+}
+
+export default Teste

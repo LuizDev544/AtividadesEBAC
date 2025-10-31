@@ -1,7 +1,13 @@
+import EstiloGlobal from './styles'
 import Teste from './Teste'
 
 function App() {
-  return <Teste />;
+  return (
+    <>
+      <EstiloGlobal />
+      <Teste />
+    </>
+  )
 }
 
 export default App
