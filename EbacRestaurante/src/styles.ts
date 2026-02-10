@@ -1,0 +1,19 @@
+import { createGlobalStyle } from 'styled-components'
+
+const Cores = {
+  Salmao: '#E66767',
+  Branco: '#FFFFFF'
+}
+
+export const GlobalCss = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: ${Cores.Salmao};
+    color: ${Cores.Branco};
+  }
+`
