@@ -1,8 +1,10 @@
+import styled from 'styled-components'
 import { createGlobalStyle } from 'styled-components'
 
 export const Cores = {
   Salmao: '#E66767',
-  Branco: '#FFFFFF'
+  Branco: '#FFFFFF',
+  BrancoClaro: '#FFF8F2'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -13,7 +15,12 @@ export const GlobalCss = createGlobalStyle`
   }
 
   body {
-    background-color: ${Cores.Salmao};
-    color: ${Cores.Branco};
+    background-color: ${Cores.BrancoClaro};
+    color: ${Cores.Salmao};
   }
+`
+export const Container = styled.div`
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
 `
