@@ -3,6 +3,7 @@ import { GlobalCss } from './styles'
 import Banner from './components/Banner'
 import Header from './components/Header'
 import Products from './components/Products'
+import ProductList from './components/ProductList'
 
 const rotas = createBrowserRouter([
   {
@@ -10,7 +11,7 @@ const rotas = createBrowserRouter([
     element: (
       <>
         <Banner />
-        <Products />
+        <ProductList title="Promoções" background="gray" />
       </>
     )
   }
