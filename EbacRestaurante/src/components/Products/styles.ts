@@ -7,3 +7,12 @@ export const Card = styled.div`
   border-radius: 1px;
   positon: relative;
 `
+export const Title = styled.h3``
+
+export const Description = styled.p``
+
+export const Avaliable = styled.h3``
+
+export const Stars = styled.img``
+
+export const Infos = styled.div``

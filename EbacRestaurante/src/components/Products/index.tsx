@@ -1,3 +1,5 @@
+import { Card, Description, Avaliable, Title, Infos, Stars } from "./styles"
+
 type props = {
   title: string
   avaliable: number

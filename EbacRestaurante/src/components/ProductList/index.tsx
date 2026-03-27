@@ -1,4 +1,5 @@
-import { Container } from "../../styles";
+import Product from '../Products'
+import { Container, List } from './styles'
 
 const ProductList = () => (
   <Container>
@@ -45,4 +46,4 @@ const ProductList = () => (
   </Container>
 )
 
-export const ProductList
+export default ProductList
