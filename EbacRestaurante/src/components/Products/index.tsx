@@ -1,4 +1,5 @@
-import { Card, Description, Avaliable, Title, Infos, Stars } from "./styles"
+import Tag from '../Tag'
+import { Card, Description, Avaliable, Title, Infos, Stars } from './styles'
 
 type props = {
   title: string
@@ -20,11 +21,11 @@ const Product = ({
   <Card>
     <img src={images} alt={title} />
     <Infos>
-      {infos.map(info) => (
+      {infos.map((info) => (
         <Tag size="small" key={info}>
-            {info}
+          {info}
         </Tag>
-      )}
+      ))}
     </Infos>
     <Title>{title}</Title>
     <Avaliable>{avaliable} disponíveis</Avaliable>
@@ -32,3 +33,5 @@ const Product = ({
     <Description>{description}</Description>
   </Card>
 )
+
+export default Product
