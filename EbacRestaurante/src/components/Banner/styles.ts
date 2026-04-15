@@ -6,31 +6,30 @@ import { Cores } from '../../styles'
 export const HeaderContainer = styled.header`
   width: 100%;
   height: 384px;
-  position: relative;
   background-image: url(${Fundo});
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0 40px;
 `
 
 export const HeaderImage = styled.img.attrs({
   src: Logo
 })`
-  position: absolute;
   width: 125px;
   height: 57.5px;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 1;
 `
 
 export const Titulo = styled.h1`
-  position: absolute;
-  width: 519px;
-  height: 84px;
-  top: 236px;
-  left: 500px;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
   color: ${Cores.Salmao};
   text-align: center;
+  max-width: 539px;
+  margin-bottom: 40px;
 `
