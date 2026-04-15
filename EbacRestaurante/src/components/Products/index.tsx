@@ -1,36 +1,49 @@
 import Tag from '../Tag'
-import { Card, Description, Avaliable, Title, Infos, Stars } from './styles'
+import Button from '../Button'
+import {
+  Card,
+  ProductImage,
+  Content,
+  HeaderCard,
+  Description,
+  Infos
+} from './styles'
 
-type props = {
+type Props = {
   title: string
-  avaliable: number
+  rating: number
   stars: string
   description: string
-  images: string
+  image: string
   infos: string[]
 }
 
 const Product = ({
   title,
-  avaliable,
+  rating,
   stars,
   description,
-  images,
+  image,
   infos
-}: props) => (
+}: Props) => (
   <Card>
-    <img src={images} alt={title} />
+    <ProductImage src={image} alt={title} />
     <Infos>
       {infos.map((info) => (
-        <Tag size="small" key={info}>
-          {info}
-        </Tag>
+        <Tag key={info}>{info}</Tag>
       ))}
     </Infos>
-    <Title>{title}</Title>
-    <Avaliable>{avaliable} disponíveis</Avaliable>
-    <Stars>{stars}</Stars>
-    <Description>{description}</Description>
+    <Content>
+      <HeaderCard>
+        <h3>{title}</h3>
+        <div>
+          <span>{rating}</span>
+          <img src={stars} alt="estrela" />
+        </div>
+      </HeaderCard>
+      <Description>{description}</Description>
+      <Button>Saiba mais</Button>
+    </Content>
   </Card>
 )
 

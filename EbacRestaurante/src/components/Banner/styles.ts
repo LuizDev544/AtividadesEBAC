@@ -7,6 +7,7 @@ export const HeaderContainer = styled.header`
   width: 100%;
   height: 384px;
   background-image: url(${Fundo});
+  background-color: ${Cores.Bege};
   background-size: cover;
   background-repeat: no-repeat;
 

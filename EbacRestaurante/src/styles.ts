@@ -3,7 +3,8 @@ import { createGlobalStyle } from 'styled-components'
 export const Cores = {
   Salmao: '#E66767',
   Branco: '#FFFFFF',
-  BrancoClaro: '#FFEBD9'
+  Bege: '#FFEBD9',
+  BegeClaro: '#FFF8F2'
 }
 
 export const GlobalCss = createGlobalStyle`
@@ -13,10 +14,11 @@ export const GlobalCss = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     list-style: none;
+    text-decoration: none;
   }
 
   body {
-    background-color: ${Cores.BrancoClaro};
+    background-color: ${Cores.BegeClaro};
     color: ${Cores.Salmao};
   }
 

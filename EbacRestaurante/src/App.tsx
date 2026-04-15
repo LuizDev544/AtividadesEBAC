@@ -18,9 +18,7 @@ function App() {
   return (
     <>
       <GlobalCss />
-      <div className="container">
-        <Header />
-      </div>
+      <Header />
       <RouterProvider router={rotas} />
     </>
   )
