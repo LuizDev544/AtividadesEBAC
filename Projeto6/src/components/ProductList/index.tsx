@@ -1,9 +1,11 @@
+import Game from '../../models/Game'
 import Product from '../Products'
 import { Container, List } from './styles'
 
 export type Props = {
   title: string
   background: 'gray' | 'black'
+  games: Game[]
 }
 
 const ProductList = ({ background, title }: Props) => (
