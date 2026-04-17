@@ -8,43 +8,22 @@ export type Props = {
   games: Game[]
 }
 
-const ProductList = ({ background, title }: Props) => (
+const ProductList = ({ background, title, games }: Props) => (
   <Container background={background}>
     <div className="container">
       <h2>{title}</h2>
       <List>
-        <Product
-          category="Ação"
-          description="Teste"
-          images="//placehold.it/222x250"
-          infos={['-10%', 'R$ 150']}
-          system="Windows"
-          title="Jogo"
-        />
-        <Product
-          category="Ação"
-          description="Teste"
-          images="//placehold.it/222x250"
-          infos={['-10%', 'R$ 150']}
-          system="Windows"
-          title="Jogo"
-        />
-        <Product
-          category="Ação"
-          description="Teste"
-          images="//placehold.it/222x250"
-          infos={['-10%', 'R$ 150']}
-          system="Windows"
-          title="Jogo"
-        />
-        <Product
-          category="Ação"
-          description="Teste"
-          images="//placehold.it/222x250"
-          infos={['-10%', 'R$ 150']}
-          system="Windows"
-          title="Jogo"
-        />
+        {games.map((game) => (
+          <Product
+            key={game.id}
+            category={game.category}
+            description={game.description}
+            images={game.image}
+            infos={game.infos}
+            system={game.system}
+            title={game.title}
+          />
+        ))}
       </List>
     </div>
   </Container>
