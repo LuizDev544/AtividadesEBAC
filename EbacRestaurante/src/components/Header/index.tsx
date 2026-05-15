@@ -9,3 +9,5 @@ export const Header = () => (
     </Titulo>
   </HeaderContainer>
 )
+
+export default Header
