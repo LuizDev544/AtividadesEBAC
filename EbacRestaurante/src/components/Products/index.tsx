@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Tag from '../Tag'
 import Button from '../Button'
 import {
@@ -10,6 +11,7 @@ import {
 } from './styles'
 
 type Props = {
+  id: number
   title: string
   rating: number
   stars: string
@@ -19,6 +21,7 @@ type Props = {
 }
 
 const Product = ({
+  id,
   title,
   rating,
   stars,
@@ -42,7 +45,9 @@ const Product = ({
         </div>
       </HeaderCard>
       <Description>{description}</Description>
-      <Button>Saiba mais</Button>
+      <Link to={`/perfil/${id}`}>
+        <Button>Saiba mais</Button>
+      </Link>
     </Content>
   </Card>
 )

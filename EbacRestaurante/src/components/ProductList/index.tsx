@@ -13,6 +13,7 @@ const ProductList = ({ restaurantes }: Props) => (
         {restaurantes.map((restaurante) => (
           <Product
             key={restaurante.id}
+            id={restaurante.id}
             title={restaurante.title}
             rating={restaurante.rating}
             stars={restaurante.stars}
