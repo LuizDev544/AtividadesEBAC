@@ -2,8 +2,13 @@ import styled from 'styled-components'
 import { Cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
-export const Card = styled.div`
-  background-color: ${Cores.cinza};
+type CardProps = {
+  background?: 'gray' | 'black'
+}
+
+export const Card = styled.div<CardProps>`
+  background-color: ${(props) =>
+    props.background === 'gray' ? Cores.preta : Cores.cinza};
   border-radius: 8px;
   padding: 8px;
   position: relative;

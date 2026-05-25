@@ -22,6 +22,7 @@ const ProductList = ({ background, title, games }: Props) => (
             infos={game.infos}
             system={game.system}
             title={game.title}
+            background={background}
           />
         ))}
       </List>

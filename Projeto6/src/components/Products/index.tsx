@@ -8,6 +8,7 @@ type props = {
   description: string
   infos: string[]
   images: string
+  background?: 'gray' | 'black'
 }
 
 const Product = ({
@@ -16,9 +17,10 @@ const Product = ({
   system,
   description,
   infos,
-  images
+  images,
+  background
 }: props) => (
-  <Card>
+  <Card background={background}>
     <img src={images} alt={title} />
     <Infos>
       {infos.map((info) => (
