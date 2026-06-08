@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
+import residentEvil from '../../assets/images/resident.png'
 
 const Product = () => {
   const { id } = useParams()
@@ -29,7 +30,7 @@ const Product = () => {
           <b>Idioma:</b> Português, Inglês, Espanhol, Francês, Alemão, Italiano
         </p>
       </Section>
-      <Gallery />
+      <Gallery name="Jogo Teste" defaultCover={residentEvil} />
     </>
   )
 }
