@@ -1,17 +1,12 @@
 import Section from '../Section'
 import zelda from '../../assets/images/zelda.png'
 import howarts from '../../assets/images/fundo_hogwarts.png'
-import Spiderman from '../../assets/images/banner-homem-aranha.png'
 import fechar from '../../assets/images/fechar.png'
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
 import { Items, Item, Action, Modal, ModalContent } from './styles'
 import { useState } from 'react'
-
-interface GalleryItem {
-  type: 'image' | 'video'
-  url: string
-}
+import { GalleryItem } from '../../Pages/Home'
 
 const mock: GalleryItem[] = [
   {
