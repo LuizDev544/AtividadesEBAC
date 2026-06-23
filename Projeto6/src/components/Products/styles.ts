@@ -1,17 +1,16 @@
 import styled from 'styled-components'
 import { Cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
+import { Link } from 'react-router-dom'
 
-type CardProps = {
-  background?: 'gray' | 'black'
-}
-
-export const Card = styled.div<CardProps>`
-  background-color: ${(props) =>
-    props.background === 'gray' ? Cores.preta : Cores.cinza};
+export const Card = styled(Link)`
+  background-color: ${Cores.cinza};
   border-radius: 8px;
   padding: 8px;
   position: relative;
+  text-decoration: none;
+  color: ${Cores.branca};
+  display: block;
 
   img {
     display: block;
