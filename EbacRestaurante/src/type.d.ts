@@ -17,3 +17,8 @@ declare type Prato = {
   preco: number
   porcao: string
 }
+
+declare module '*.png' {
+  const src: string
+  export default src
+}

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ListUl = styled.ul`
   margin-top: 80px;
@@ -8,4 +8,4 @@ export const ListUl = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-`;
+`

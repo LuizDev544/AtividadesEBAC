@@ -1,22 +1,22 @@
-import logo from "../../../assets/logo.png";
-import instagram from "../../../assets/instagram.png";
-import facebook from "../../../assets/facebook.png";
+import logo from '../../../assets/logo.png'
+import instagram from '../../../assets/instagram.png'
+import facebook from '../../../assets/facebook.png'
 import twitter from '../../../assets/twitter.png'
 import { FooterContainer, FooterInfo, FooterUl } from './styles'
 
 export function Footer() {
   return (
     <FooterContainer>
-      <img src={logo} />
+      <img src={logo} alt="efood" />
       <FooterUl>
         <li>
-          <img src={instagram} />
+          <img src={instagram} alt="Instagram" />
         </li>
         <li>
-          <img src={facebook} />
+          <img src={facebook} alt="Facebook" />
         </li>
         <li>
-          <img src={twitter} />
+          <img src={twitter} alt="Twitter" />
         </li>
       </FooterUl>
       <FooterInfo>

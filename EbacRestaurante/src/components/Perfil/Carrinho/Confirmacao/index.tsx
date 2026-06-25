@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { close, clearCart } from '../../../../store/reducers/cartSlice'
-import { CheckoutBTN } from '../styles'
 import { PaymentForm, PaymentInfos } from './styles'
+import { CheckoutBTN } from '../styles'
 import type { RootState } from '../../../../store/store'
 import { Loading } from '../../../Loading'
 import { useEffect } from 'react'

@@ -1,5 +1,5 @@
-import { BrandTitle, HeroDiv } from "./styles";
-import logo from "../../../assets/logo.png";
+import { BrandTitle, HeroDiv } from './styles'
+import logo from '../../../assets/logo.png'
 
 export default function Hero() {
   return (
@@ -11,5 +11,5 @@ export default function Hero() {
         </BrandTitle>
       </HeroDiv>
     </>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import { SyncLoader } from "react-spinners";
-import { cores } from "../../styles/cores";
-import { LoadingDiv } from "./styles";
+import { SyncLoader } from 'react-spinners'
+import { cores } from '../../styles/cores'
+import { LoadingDiv } from './styles'
 
 export function Loading() {
   return (

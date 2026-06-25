@@ -1,4 +1,4 @@
-import Card from "../../../containers/Card"
+import Card from '../../../containers/Card'
 import { ListUl } from './styles'
 
 export type Props = {
