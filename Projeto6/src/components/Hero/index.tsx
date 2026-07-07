@@ -2,7 +2,7 @@ import Button from '../Button'
 import Tag from '../Tag'
 import { parseToBrl } from '../../utils'
 import { useDispatch } from 'react-redux'
-import { add, open } from '../../store/reducers/cart'
+import { add, open } from '../../Store/reducers/cart'
 import * as S from './styles'
 
 type Props = {

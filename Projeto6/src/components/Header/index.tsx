@@ -1,14 +1,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { HashLink } from 'react-router-hash-link'
 import { useDispatch, useSelector } from 'react-redux'
 
 import * as S from './styles'
 
 import logo from '../../assets/images/logo.svg'
 import cartIcon from '../../assets/images/carrinho.svg'
-import { open } from '../../store/reducers/cart'
-import { RootReducer } from '../../store'
+import { open } from '../../Store/reducers/cart'
+import { RootReducer } from '../../Store'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -44,20 +43,20 @@ const Header = () => {
                 </Link>
               </S.LinkItem>
               <S.LinkItem>
-                <HashLink
+                <Link
                   title="Clique aqui para acessar as novidades"
                   to="/#coming-soon"
                 >
                   Em breve
-                </HashLink>
+                </Link>
               </S.LinkItem>
               <S.LinkItem>
-                <HashLink
+                <Link
                   title="Clique aqui para acessar as promoções"
                   to="/#on-sale"
                 >
                   Promoções
-                </HashLink>
+                </Link>
               </S.LinkItem>
             </S.Links>
           </nav>
@@ -79,22 +78,22 @@ const Header = () => {
             </Link>
           </S.LinkItem>
           <S.LinkItem>
-            <HashLink
+            <Link
               title="Clique aqui para acessar as novidades"
               to="/#coming-soon"
               onClick={() => setIsMenuOpen(false)}
             >
               Em breve
-            </HashLink>
+            </Link>
           </S.LinkItem>
           <S.LinkItem>
-            <HashLink
+            <Link
               title="Clique aqui para acessar as promoções"
               to="/#on-sale"
               onClick={() => setIsMenuOpen(false)}
             >
               Promoções
-            </HashLink>
+            </Link>
           </S.LinkItem>
         </S.Links>
       </S.NavMobile>
