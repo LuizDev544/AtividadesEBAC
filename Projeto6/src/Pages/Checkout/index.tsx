@@ -4,18 +4,14 @@ import { useFormik } from 'formik'
 import { useSelector, useDispatch } from 'react-redux'
 import { Navigate } from 'react-router-dom'
 import InputMask from 'react-input-mask'
-
 import Card from '../../components/Card'
 import Button from '../../components/Button'
-
 import barCode from '../../assets/images/boleto.png'
 import creditCard from '../../assets/images/cartao.png'
-
-import { usePurchaseMutation } from '../../services/api'
-
+import { usePurchaseMutation } from '../../Services/api'
 import * as S from './styles'
-import { RootReducer } from '../../store'
-import { clear } from '../../store/reducers/cart'
+import { RootReducer } from '../../Store'
+import { clear } from '../../Store/reducers/cart'
 import { getTotalPrice, parseToBrl } from '../../utils'
 
 type Installment = {

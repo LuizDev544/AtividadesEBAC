@@ -1,11 +1,9 @@
-[import { useParams } from 'react-router-dom'
-
+import { useParams } from 'react-router-dom'
 import Loader from '../../components/Loader'
 import Hero from '../../components/Hero'
 import Section from '../../components/Section'
 import Gallery from '../../components/Gallery'
-
-import { useGetGameQuery } from '../../services/api'
+import { useGetGameQuery } from '../../Services/api'
 
 type GameParams = {
   id: string
@@ -43,4 +41,4 @@ const Product = () => {
   )
 }
 
-export default Product]
+export default Product

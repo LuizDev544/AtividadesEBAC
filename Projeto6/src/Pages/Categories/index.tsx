@@ -1,12 +1,12 @@
 import React from 'react'
-import ProductsList from '../../components/ProductsList'
+import ProductsList from '../../components/ProductList'
 import {
   useGetActionGamesQuery,
   useGetFightGamesQuery,
   useGetRpgGamesQuery,
   useGetSimulationGamesQuery,
   useGetSportGamesQuery
-} from '../../services/api'
+} from '../../Services/api'
 
 const Categories = () => {
   const { data: actionGames, isLoading: isLoadingAction } =

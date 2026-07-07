@@ -2,7 +2,7 @@ import Tag from '../Tag'
 import Button from '../Button'
 import Loader from '../Loader'
 import { parseToBrl } from '../../utils'
-import { useGetFeaturedGameQuery } from '../../services/api'
+import { useGetFeaturedGameQuery } from '../../Services/api'
 
 import * as S from './styles'
 

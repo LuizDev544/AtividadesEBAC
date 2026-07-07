@@ -1,4 +1,3 @@
-import React from 'react'
 import Product from '../Product'
 import * as S from './styles'
 import { parseToBrl } from '../../utils'

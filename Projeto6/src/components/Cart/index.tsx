@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import Button from '../Button'
 import Tag from '../Tag'
 
-import { RootReducer } from '../../store'
-import { close, remove } from '../../store/reducers/cart'
+import { RootReducer } from '../../Store'
+import { close, remove } from '../../Store/reducers/cart'
 
 import { getTotalPrice, parseToBrl } from '../../utils'
 import * as S from './styles'

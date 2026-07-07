@@ -1,7 +1,7 @@
 import Banner from '../../components/Banner'
-import ProductsList from '../../components/ProductsList'
+import ProductsList from '../../components/ProductList'
 
-import { useGetSoonQuery, useGetOnSaleQuery } from '../../services/api'
+import { useGetSoonQuery, useGetOnSaleQuery } from '../../Services/api'
 
 const Home = () => {
   const { data: onSaleGames, isLoading: isLoadingSale } = useGetOnSaleQuery()
