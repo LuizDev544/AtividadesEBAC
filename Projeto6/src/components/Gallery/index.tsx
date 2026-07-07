@@ -1,27 +1,11 @@
+import { useState } from 'react'
 import Section from '../Section'
-import zelda from '../../assets/images/zelda.png'
-import howarts from '../../assets/images/fundo_hogwarts.png'
-import fechar from '../../assets/images/fechar.png'
+
 import play from '../../assets/images/play.png'
 import zoom from '../../assets/images/zoom.png'
-import { Items, Item, Action, Modal, ModalContent } from './styles'
-import { useState } from 'react'
-import { GalleryItem } from '../../Pages/Home'
 
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: zelda
-  },
-  {
-    type: 'image',
-    url: howarts
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/BQR-3OFb_Cc?si=-K0MOHMzPCbffmQK'
-  }
-]
+import closeIcon from '../../assets/images/fechar.png'
+import * as S from './styles'
 
 type Props = {
   defaultCover: string
@@ -34,23 +18,26 @@ interface ModalState extends GalleryItem {
 }
 
 const Gallery = ({ defaultCover, name, items }: Props) => {
-  const [modalState, setModalState] = useState<ModalState>({
+  const [modal, setModal] = useState<ModalState>({
+    isVisible: false,
     type: 'image',
-    url: '',
-    isVisible: false
+    url: ''
   })
-  const getMediaCover = (Item: GalleryItem) => {
-    if (Item.type === 'image') return Item.url
+  const [modalEstaAberto, setModalEstaAberto] = useState(false)
+  const [modalUrl, setModalUrl] = useState('')
+
+  const getMediaCover = (item: GalleryItem) => {
+    if (item.type === 'image') return item.url
     return defaultCover
   }
 
-  const getMediaIcon = (Item: GalleryItem) => {
-    if (Item.type === 'image') return zoom
+  const getMediaIcon = (item: GalleryItem) => {
+    if (item.type === 'image') return zoom
     return play
   }
 
   const closeModal = () => {
-    setModalState({
+    setModal({
       isVisible: false,
       type: 'image',
       url: ''
@@ -60,12 +47,12 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
   return (
     <>
       <Section title="Galeria" background="black">
-        <Items>
+        <S.Items>
           {items.map((media, index) => (
-            <Item
+            <S.Item
               key={media.url}
               onClick={() => {
-                setModalState({
+                setModal({
                   isVisible: true,
                   type: media.type,
                   url: media.url
@@ -76,41 +63,35 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
                 src={getMediaCover(media)}
                 alt={`Mídia ${index + 1} de ${name}`}
               />
-              <Action>
+              <S.Action>
                 <img
                   src={getMediaIcon(media)}
-                  alt="CLique para maximizar a mídia"
+                  alt="Clique para maximizar a mídia"
                 />
-              </Action>
-            </Item>
+              </S.Action>
+            </S.Item>
           ))}
-        </Items>
+        </S.Items>
       </Section>
-      <Modal className={modalState.isVisible ? 'visivel' : ''}>
-        <ModalContent className="container">
+      <S.Modal className={modal.isVisible ? 'visible' : ''}>
+        <S.ModalContent className="container">
           <header>
             <h4>{name}</h4>
-            <img
-              src={fechar}
-              alt="Fechar"
-              onClick={() => {
-                closeModal()
-              }}
-            />
+            <img src={closeIcon} alt="fechar" onClick={closeModal} />
           </header>
-          {modalState.type === 'image' ? (
-            <img src={modalState.url} alt="Mídia" />
+          {modal.type === 'image' ? (
+            <img src={modal.url} />
           ) : (
-            <iframe frameBorder={0} src={modalState.url} />
+            <iframe frameBorder={0} src={modal.url} title="video" />
           )}
-        </ModalContent>
+        </S.ModalContent>
         <div
-          className="overlay"
           onClick={() => {
             closeModal()
           }}
+          className="overlay"
         ></div>
-      </Modal>
+      </S.Modal>
     </>
   )
 }
